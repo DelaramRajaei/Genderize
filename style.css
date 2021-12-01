@@ -18,8 +18,13 @@ body{
     padding: 5%;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 
-.application{
-    
+.application_form_element{
+    margin-bottom: 5%;
+}
+
+.application_form_element{
+    display: block;
 }

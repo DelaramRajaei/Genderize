@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Genderize</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="application">
-            <form>
-                <h3>Mr. or Ms.?</h3>
-                <label for="name">Name</label>
-                <input type="text" id="name">
-
-                <input type="radio" id="male" name="gender" value="male">
-                <label for="male">Male</label>
-
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Female</label>
-
-                <button type="submit">Submit</button>
-                <button type="button">Save</button>
-            </form>
-        </div>
-        <div class="result">
-            <div class="online">
-                <h1>Prediction</h1>
-                <span class="result_gender"></span>
-                <span class="result_probability"></span>
+      <div class="application">
+        <form>
+          <fieldset>
+            <legend><h3>Mr. or Ms.?</h3></legend>
+            <div class="application_form_element">
+              <label for="name">Name</label>
+              <input type="text" id="name" />
             </div>
-            <div class="local">
-                <h1>Saved answer</h1>
-                <span class="result_local"></span>  
-                <button type="button">Clear</button>
+            <div class="application_form_element">
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male">Male</label>
             </div>
+            <div class="application_form_element">
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="female">Female</label>
+            </div>
+            <button class="application_form_element" type="submit">Submit</button>
+            <button class="application_form_element" type="button">Save</button>
+          </fieldset>
+        </form>
+      </div>
+      <div class="result">
+        <div class="online">
+          <h1>Prediction</h1>
+          <p class="result_gender">Male</p>
+          <p class="result_probability">0.95</p>
         </div>
+        <div class="local">
+          <h1>Saved answer</h1>
+          <p class="result_local">Male</p>
+          <button type="button">Clear</button>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
