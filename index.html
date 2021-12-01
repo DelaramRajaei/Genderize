@@ -9,9 +9,9 @@
   <body>
     <div class="container">
       <div class="application">
-        <form>
+        <form id = "application_form">
           <fieldset>
-            <legend><h3>Mr. or Ms.?</h3></legend>
+            <legend><h2>Mr. or Ms.?</h2></legend>
             <div class="application_form_element">
               <label for="name">Name</label>
               <input type="text" id="name" />
@@ -31,16 +31,17 @@
       </div>
       <div class="result">
         <div class="online">
-          <h1>Prediction</h1>
-          <p class="result_gender">Male</p>
-          <p class="result_probability">0.95</p>
+          <h2>Prediction</h2>
+          <p id="result_gender">Male</p>
+          <p id="result_probability">0.95</p>
         </div>
         <div class="local">
-          <h1>Saved answer</h1>
-          <p class="result_local">Male</p>
+          <h2>Saved answer</h2>
+          <p id="result_local">Male</p>
           <button type="button">Clear</button>
         </div>
       </div>
     </div>
+    <script src="./main.js"></script>
   </body>
 </html>
