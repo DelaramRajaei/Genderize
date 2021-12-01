@@ -9,13 +9,15 @@ inquery = (e) => {
       document.getElementById(
         "result_gender"
       ).innerText = capitalizeFirstLetter(result.gender);
-      document.getElementById(
-        "result_probability"
-      ).innerText = capitalizeFirstLetter(result.probability);
+      document.getElementById("result_probability").innerText =
+        result.probability;
     })
     .catch((err) => console.error(err));
 };
 
+saveAName = (e) =>{
+  
+}
 capitalizeFirstLetter = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };

@@ -9,7 +9,7 @@
   <body>
     <div class="container">
       <div class="application">
-        <form id = "application_form">
+        <form id="application_form">
           <fieldset>
             <legend><h2>Mr. or Ms.?</h2></legend>
             <div class="application_form_element">
@@ -24,7 +24,9 @@
               <input type="radio" id="female" name="gender" value="female" />
               <label for="female">Female</label>
             </div>
-            <button class="application_form_element" type="submit">Submit</button>
+            <button class="application_form_element" type="submit">
+              Submit
+            </button>
             <button class="application_form_element" type="button">Save</button>
           </fieldset>
         </form>
@@ -32,12 +34,21 @@
       <div class="result">
         <div class="online">
           <h2>Prediction</h2>
-          <p id="result_gender">Male</p>
-          <p id="result_probability">0.95</p>
+          <div class="gender">
+            <span >Gender:</span>
+            <span class="text" id="result_gender"></span>
+          </div>
+          <div class="probability">
+            <span >Probability:</span>
+            <span class="text" id="result_probability"></span>
+          </div>
         </div>
         <div class="local">
           <h2>Saved answer</h2>
-          <p id="result_local">Male</p>
+          <div class="gender">
+            <span class="text">Gender: </span>
+            <span id="result_local"></span>
+          </div>
           <button type="button">Clear</button>
         </div>
       </div>

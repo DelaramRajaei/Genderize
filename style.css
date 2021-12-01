@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-  border: 5px dashed rgb(7, 17, 67);
+  border: 10px double #230854 ;
   background-color: rgba(255, 255, 255, 0.7);
   width: 50%;
   min-height: 30vh;
@@ -30,7 +30,17 @@ body {
 h2 {
   color: #271256;
 }
-
+.online div{
+    margin: 10px;
+}
+.text{
+    color: #164E50;
+    border: solid #616161  1px;
+    border-radius: 8px;
+    padding: 3px;
+    background-color:#E1E7E7 ;
+    margin: 2px;
+}
 .result {
   display: flex;
   flex-direction: column;
