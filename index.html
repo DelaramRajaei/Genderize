@@ -10,21 +10,32 @@
     <div class="container">
         <div class="application">
             <form>
-                <caption>Mr. or Ms.?</caption>
+                <h3>Mr. or Ms.?</h3>
                 <label for="name">Name</label>
                 <input type="text" id="name">
 
-                <input type="radio" id="male" name="gender" value="Male">
+                <input type="radio" id="male" name="gender" value="male">
                 <label for="male">Male</label>
 
-                <input type="radio" id="female" name="gender" value="Female">
+                <input type="radio" id="female" name="gender" value="female">
                 <label for="female">Female</label>
 
-                <button type="submit" value="Submit">Submit</button>
-                <button type="button" value="Save">Save</button>
+                <button type="submit">Submit</button>
+                <button type="button">Save</button>
             </form>
         </div>
-        <div class="result"></div>
+        <div class="result">
+            <div class="online">
+                <h1>Prediction</h1>
+                <span class="result_gender"></span>
+                <span class="result_probability"></span>
+            </div>
+            <div class="local">
+                <h1>Saved answer</h1>
+                <span class="result_local"></span>  
+                <button type="button">Clear</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>
