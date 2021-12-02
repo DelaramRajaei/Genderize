@@ -1,20 +1,29 @@
+/*Body of the whole page.
+Choose a picture for background, define sizes and repeat it so it will be responsive for any device.
+Select a font a family.
+Choose flex for display so that container is displayed in the middle.*/
 body {
   background: url(./assets/bg.jpg) repeat;
   min-width: 50vw;
   min-height: 90vh;
   font-family: "FredokaOne", Arial, sans-serif;
-  /* background-size: cover; */
+  /* background-size: cover; */ /*This is used for other pictures to cover the whole page.*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+/*New font declaration*/
 @font-face {
   font-family: "FredokaOne";
   src: url(./assets/FredokaOne-Regular.ttf);
 }
 
+/*The container (box) in the middle of the page.
+With a double border and flex display in row.
+Select background color in white with 0.7 tranparensy.
+*/
 .container {
   border: 10px double #230854;
   background-color: rgba(255, 255, 255, 0.7);
@@ -27,12 +36,47 @@ body {
   justify-content: space-around;
 }
 
+/*All the h2 titles and texts are dark purple. */
 h2 {
   color: #271256;
 }
+
+/*The container is spilited into two smaller containers: application and result.
+Application contained the form and input section.
+Result contains the result of the fetch, local storage display and the error display section.*/
+
+/*All the items in application are displayed block and have a 5% margin (space) from the item bellow them.*/
+.application_form_element {
+  margin-bottom: 5%;
+  display: block;
+}
+
+/*The result div is displayed in flex in order to place all the other divs inside it in a column.
+Justify-content is space-around so that the space is splited around the other containers.
+*/
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/*All the h2 texts and titles in result container are underlined.*/
+.result h2 {
+  text-decoration: underline;
+}
+
+/*This section is for the results from the given url - gender and probability.
+They have 10 px margin from all the other items around them.*/
 .online div {
   margin: 10px;
 }
+
+
+/*All the items that show the result of a function and are inserted later
+for example the result of the gende and probability or even error
+are designed in blue color with a ligher blue in background.
+They are aligned center and have a 3px padding from the border and have
+a little space from other items around them.*/
 .text {
   color: #164e50;
   border: solid #616161 1px;
@@ -41,45 +85,49 @@ h2 {
   background-color: #e1e7e7;
   margin: 2px;
   text-align-last: center;
-}
-.result {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.result h2 {
-  text-decoration: underline;
-}
-
-.application_form_element {
-  margin-bottom: 5%;
   display: block;
 }
 
+/*Local is another container in result which is used for displaying 
+the result of searching in localStorage.
+If the name already exists, it is going to be displayed in text designed (priorly explaind)
+and it is not going to be displayed as long as it's function is not called.*/
 .local {
   display: none;
 }
 
+/*The button in the local section - the clear button - have a margin on top and left.
+For elegant looking!*/
 .local button {
   margin-top: 3px;
   margin-left: 8px;
 }
 
-.local_gender {
-  display: block;
+/*All the texts in local except the clear button have a left nargin.
+The clear button is designed in above.*/
+.local_item {
+  margin-left: 8px;
 }
 
+/*All the texts inserted in online result_online container are not displayed at first.
+If it is displyed at first, it would have shown an empty border.*/
 .online_result_item {
   display: none;
 }
 
+/*This section is for the errors.
+It is not displayed at first or when there is no error.
+This section is replaced by the local section when it is displayed.*/
+.error {
+  display: none;
+}
+
+/*This is the error text which is going to show the error of the program to user.
+It is displayed block so that it is not in the same line as the line before "Gender: "
+Also have a left margin for an elegant view.*/
 .error_display * {
   display: block;
   margin-left: 8px;
 }
-.error {
-  display: none;
-}
-.local_item {
-  margin-left: 8px;
-}
+
+
