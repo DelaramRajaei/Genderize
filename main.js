@@ -55,7 +55,7 @@ const inquery = (e) => {
 const saveName = () => {
   const name = document.getElementById("name").value;
 
-  document.getElementsByName("gender").forEach((elem) => {
+  document.getElementsByName('gender').forEach((elem) => {
     if (elem.checked || elem.checked === "checked") {
       localStorage.setItem(name, elem.value);
       localGenderDiv.innerText = capitalizeFirstLetter(elem.value);
@@ -69,7 +69,7 @@ const saveName = () => {
  * the data will be cleared and the display of local section is changed to none.
  */
 const clearLocalStorage = () => {
-  const name = document.getElementById("name").value;
+  const name = document.getElementById('name').value;
   localStorage.removeItem(name);
   localDiv.style.display = "none";
 };
