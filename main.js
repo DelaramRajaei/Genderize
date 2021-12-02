@@ -8,7 +8,7 @@ const resultError = document.getElementById("result_error");
 const inquery = (e) => {
   e.preventDefault();
   errorDiv.style.display = "none";
-  const validator = new RegExp(/[a-zA-Z\s]{1,255}/);
+  const validator = new RegExp(/^[a-zA-Z\s]{1,255}$/);
   const name = document.getElementById("name").value;
   if (!validator.test(name)) {
     genderResult.style.display = probabilityResult.style.display = "none";
