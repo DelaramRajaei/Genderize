@@ -27,29 +27,45 @@
             <button class="application_form_element" type="submit">
               Submit
             </button>
-            <button class="application_form_element" type="button">Save</button>
+            <button
+              class="application_form_element"
+              id="application_form_save"
+              type="button"
+            >
+              Save
+            </button>
           </fieldset>
         </form>
       </div>
       <div class="result">
-        <div class="online">
+        <div class="online" id="online">
           <h2>Prediction</h2>
           <div class="gender">
-            <span >Gender:</span>
-            <span class="text" id="result_gender"></span>
+            <span>Gender:</span>
+            <span class="text online_result_item" id="result_gender"></span>
           </div>
           <div class="probability">
-            <span >Probability:</span>
-            <span class="text" id="result_probability"></span>
+            <span>Probability:</span>
+            <span
+              class="text online_result_item"
+              id="result_probability"
+            ></span>
           </div>
         </div>
-        <div class="local">
+        <div class="local" id="local">
           <h2>Saved answer</h2>
           <div class="gender">
-            <span class="text">Gender: </span>
-            <span id="result_local"></span>
+            <span>Gender: </span>
+            <span id="local_gender" class="text local_gender"></span>
           </div>
-          <button type="button">Clear</button>
+          <button type="button" id="local_clear">Clear</button>
+        </div>
+        <div class="error" id="error">
+          <h2>Error</h2>
+          <div class="error_display">
+            <span>Error:</span>
+            <span class="text" id="result_error"></span>
+          </div>
         </div>
       </div>
     </div>

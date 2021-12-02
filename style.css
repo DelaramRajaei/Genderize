@@ -58,3 +58,23 @@ h2 {
 .local{
     display: none;
 }
+
+.local button{
+    margin: 3px;
+}
+
+.local_gender{
+    display: block;
+}
+
+.online_result_item{
+    display: none;
+}
+
+.error_display *{
+  display: block;
+  margin-left: 8px;
+}
+.error{
+  display: none;
+}
