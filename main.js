@@ -31,7 +31,7 @@ const inquery = (e) => {
   if (!localGender) {
     localDiv.style.display = "none";
   } else {
-    localGenderDiv.innerText = localGender;
+    localGenderDiv.innerText = capitalizeFirstLetter(localGender);
     localDiv.style.display = "block";
   }
 };
